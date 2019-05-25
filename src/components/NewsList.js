@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, Modal, ScrollView } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Content } from 'native-base';
+import HTML from 'react-native-render-html'; 
 import { fetchNews } from '../actions/news';
 import NewsCard from './NewsCard';
 
@@ -10,23 +11,23 @@ class NewsList extends Component {
         this.props.fetchNews();
     }
     render() {
-        console.log(this.props.newsArticles);
+        console.log(this.props);
         return (
            
             <Container>
-            <Content>
-            <FlatList 
-                data={this.props.newsArticles}
-                renderItem={({ item }) => <NewsCard key={item.title._text} article={item} />}
-            />
-            </Content>
+                <Content>
+                    <FlatList 
+                        data={this.props.newsArticles}
+                        renderItem={({ item }) => <NewsCard key={item.title._text} article={item} />}
+                    />
+                </Content>
             </Container>
         );
     }
 }
 
 const mapStateToProps = ({ news }) => {
-    return { newsArticles: news.newsArray };
+    return { newsArticles: news.newsArray, displayModal: news.displayModal, articleURL: news.articleURL };
 };
 
 export default connect(mapStateToProps, { fetchNews })(NewsList);

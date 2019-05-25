@@ -1,7 +1,7 @@
 import axios from 'axios';
 import convert from 'xml-js';
 
-export function populateArray(data) {
+function populateArray(data) {
     return ({
         type: 'NEWS_ITEMS',
         payload: data
@@ -19,3 +19,4 @@ export function fetchNews() {
         .catch(error => { console.log(error); });
     });
 }
+

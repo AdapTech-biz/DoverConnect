@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
 import { 
     Text, 
     Card, 
@@ -8,6 +8,7 @@ import {
     Left,
     Body
     } from 'native-base';
+
 
 class NewsCard extends Component {
     
@@ -21,7 +22,8 @@ class NewsCard extends Component {
     render() {
         // console.log((this.props.article));
         return (
-                   <Card>
+                <TouchableOpacity >
+                    <Card>
                        <CardItem> 
                            <Left>
                                 <Thumbnail source={require('../images/dover_logo.png')} />
@@ -47,6 +49,7 @@ class NewsCard extends Component {
                            
                        </CardItem>
                    </Card>
+                </TouchableOpacity>
 
         );
     }

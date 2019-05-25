@@ -24,12 +24,12 @@ class App extends Component {
       <Provider store={store}>  
         <StyleProvider style={getTheme(platform)}>
           <Container>
-                  <Header noLeft hasTabs>
+                  <Header hasTabs>
                   <Left />
-                    <Body>
+                    <Body style={{flex: 1}} >
                       <Image source={require('./src/images/app_logo.png')} />
                     </Body>
-                    <Right />
+                    <Right  />
                   </Header>
                   <Tabs renderTabBar={() => <ScrollableTab />}>
                     <Tab heading="News">

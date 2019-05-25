@@ -1,4 +1,4 @@
-const INIT_STATE = { newsArray: [] };
+const INIT_STATE = { newsArray: [], displayModal: false, articleURL: '' };
 
 export default function (state = INIT_STATE, action) {
     switch (action.type) {
