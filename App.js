@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Image } from 'react-native';
 import { Container, Header, Left, Right, Body, Title, Text, Tab, Tabs, ScrollableTab, StyleProvider } from 'native-base';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -26,7 +27,7 @@ class App extends Component {
                   <Header noLeft hasTabs>
                   <Left />
                     <Body>
-                      <Title>Dover AFB</Title>
+                      <Image source={require('./src/images/app_logo.png')} />
                     </Body>
                     <Right />
                   </Header>
