@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-import { Container, Header, Left, Right, Body, Title, Text, Tab, Tabs, ScrollableTab, StyleProvider } from 'native-base';
+import { Container, Header, Left, 
+        Right, Body, Tab, Tabs,
+        ScrollableTab, StyleProvider } from 'native-base';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
@@ -26,10 +28,10 @@ class App extends Component {
           <Container>
                   <Header hasTabs>
                   <Left />
-                    <Body style={{flex: 1}} >
+                    <Body style={{ flex: 1 }} >
                       <Image source={require('./src/images/app_logo.png')} />
                     </Body>
-                    <Right  />
+                    <Right />
                   </Header>
                   <Tabs renderTabBar={() => <ScrollableTab />}>
                     <Tab heading="News">

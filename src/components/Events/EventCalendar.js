@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
 import { Agenda } from 'react-native-calendars';
-import { fetchEvents } from '../actions/events';
+import { fetchEvents } from '../../actions/events';
 import AgendaItem from './AgendaItem';
 import AgendaDayHeader from './AgendaDayHeader';
 

@@ -1,8 +1,9 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { Image, Text, StyleSheet } from 'react-native';
 import { Card, CardItem } from 'native-base';
 
-const DirectoryItem = (props) => {
+const DirectoryItem = () => {
     return (
         <Card style={styles.cardStyle}>
             <CardItem style={styles.cardItemStyle} >

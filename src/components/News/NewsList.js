@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { FlatList, Modal, ScrollView } from 'react-native';
+import { FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { Container, Content } from 'native-base';
-import HTML from 'react-native-render-html'; 
-import { fetchNews } from '../actions/news';
+import { fetchNews } from '../../actions/news';
 import NewsCard from './NewsCard';
 
 class NewsList extends Component {
