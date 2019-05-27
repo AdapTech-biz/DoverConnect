@@ -26,7 +26,7 @@ class NewsCard extends Component {
                     <Card>
                        <CardItem> 
                            <Left>
-                                <Thumbnail source={require('../images/dover_logo.png')} />
+                                <Thumbnail source={require('../../images/dover_logo.png')} />
                                 <Body>
                                     <Text>{this.props.article.title._text}</Text>
                                     <Text note>10 Jun 2019</Text>

@@ -54,7 +54,7 @@ class EventCalendar extends Component {
             
             // specify what should be rendered instead of ActivityIndicator
             renderEmptyData={() => (<ImageBackground 
-                                      source={require('../images/dover_logo.png')} 
+                                      source={require('../../images/dover_logo.png')} 
                                       style={{ width: '100%', height: '100%', opacity: 0.1 }} 
             />)}
             // specify your item comparison function for increased performance

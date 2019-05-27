@@ -8,12 +8,12 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import getTheme from './native-base-theme/components';
 import platform from './native-base-theme/variables/platform';
-import NewsList from './src/components/News/NewsList';
-import EventCalendar from './src/components/Events/EventCalendar';
-import Travel from './src/components/Space-A/Travel';
-import DirectoryList from './src/components/Directory/DirectoryList';
+import NewsList from './src/components/News/NewsList.js';
+import EventCalendar from './src/components/Events/EventCalendar.js';
+import Travel from './src/components/Space-A/Travel.js';
+import DirectoryList from './src/components/Directory/DirectoryList.js';
 import rootReducer from './src/reducers';
-import PlacesToEat from './src/components/Dinning/PlacesToEat';
+import PlacesToEat from './src/components/Dinning/PlacesToEat.js';
 
 class App extends Component {
   render() {
