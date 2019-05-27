@@ -20,7 +20,6 @@ const ResturantCard = (props) => {
             </CardItem>
         </Card>
     );
-    
 };
 
 export default ResturantCard;

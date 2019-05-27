@@ -1,9 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { numToMonth } from '../helperFunctions';
+import { numToMonth } from '../../helperFunctions';
 
 const AgendaDayHeader = (props) => {
-    console.log(props.day);
     return (
         <View>
             <Text style={styles.textStyle}>

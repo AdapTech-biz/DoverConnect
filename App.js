@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
+<<<<<<< HEAD
 import { Container, Header, Left,
        Right, Body, Tab, Tabs, 
        ScrollableTab, StyleProvider } from 'native-base';
+=======
+import { Container, Header, Left, 
+        Right, Body, Tab, Tabs,
+        ScrollableTab, StyleProvider } from 'native-base';
+>>>>>>> aa6055c96e14b2eb8950827f007de021677b0c9b
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';

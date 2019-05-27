@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React, { Component } from 'react';
 import { Image, TouchableOpacity } from 'react-native';
 import { 
@@ -11,7 +12,6 @@ import {
 
 
 class NewsCard extends Component {
-    
     renderImage() {
         if (this.props.article.enclosure !== undefined) {
             return this.props.article.enclosure._attributes.url;
