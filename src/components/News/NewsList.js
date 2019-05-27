@@ -9,6 +9,9 @@ class NewsList extends Component {
     componentWillMount() {
         this.props.fetchNews();
     }
+
+    _keyExtractor = (item, index) => item.title._text;
+
     render() {
         console.log(this.props);
         return (
@@ -17,6 +20,8 @@ class NewsList extends Component {
                 <Content>
                     <FlatList 
                         data={this.props.newsArticles}
+                        initialNumToRender={10}
+                        keyExtractor={this._keyExtractor}
                         renderItem={({ item }) => <NewsCard key={item.title._text} article={item} />}
                     />
                 </Content>

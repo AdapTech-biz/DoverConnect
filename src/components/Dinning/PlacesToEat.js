@@ -4,6 +4,9 @@ import { FlatList } from 'react-native';
 import ResturantCard from './ResturantCard';
 
 class PlacesToEat extends Component {
+
+    _keyExtractor = (item, index) => item.name;
+
     render() {
         const places = [
             { name: 'FREDS', image: 'https://scontent.fphl2-3.fna.fbcdn.net/v/t1.0-9/56218238_2251044898293745_7793767467729289216_n.jpg?_nc_cat=104&_nc_ht=scontent.fphl2-3.fna&oh=26f9772767a865e9d74c57718da3c65f&oe=5D51B192' },
@@ -17,6 +20,7 @@ class PlacesToEat extends Component {
                     data={places}
                     renderItem={({ item }) => <ResturantCard details={item} />}
                     horizontal={false}
+                    keyExtractor={this._keyExtractor}
                     numColumns={2}
                 />
             </Content>
