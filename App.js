@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-<<<<<<< HEAD
-import { Container, Header, Left,
-       Right, Body, Tab, Tabs, 
-       ScrollableTab, StyleProvider } from 'native-base';
-=======
 import { Container, Header, Left, 
         Right, Body, Tab, Tabs,
         ScrollableTab, StyleProvider } from 'native-base';
->>>>>>> aa6055c96e14b2eb8950827f007de021677b0c9b
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import getTheme from './native-base-theme/components';
 import platform from './native-base-theme/variables/platform';
-import NewsList from './src/components/NewsList';
-import EventCalendar from './src/components/EventCalendar';
-import Travel from './src/components/Travel';
-import DirectoryList from './src/components/DirectoryList';
+import NewsList from './src/components/News/NewsList';
+import EventCalendar from './src/components/Events/EventCalendar';
+import Travel from './src/components/Space-A/Travel';
+import DirectoryList from './src/components/Directory/DirectoryList';
 import rootReducer from './src/reducers';
-import PlacesToEat from './src/components/PlacesToEat';
+import PlacesToEat from './src/components/Dinning/PlacesToEat';
 
 class App extends Component {
   render() {
