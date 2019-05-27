@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Content } from 'native-base'; 
 import { FlatList } from 'react-native';
 import ResturantCard from './ResturantCard';
 
@@ -11,12 +12,14 @@ class PlacesToEat extends Component {
             { name: 'Mugs Coffe Bar', image: 'https://static.wixstatic.com/media/70db0d_3071b6437e5641f6b9c7b06eb6bd2160~mv2.jpg' },
             { name: 'The Grill at Eagle Creek', image: 'https://static.wixstatic.com/media/70db0d_ec5eb4d5d76a43f4918a199efd1259d6~mv2_d_2400_2400_s_4_2.png' }];
         return (
-            <FlatList
-                data={places}
-                renderItem={({ item }) => <ResturantCard details={item} />}
-                horizontal={false}
-                numColumns={2}
-            />
+            <Content>
+                <FlatList
+                    data={places}
+                    renderItem={({ item }) => <ResturantCard details={item} />}
+                    horizontal={false}
+                    numColumns={2}
+                />
+            </Content>
 
            
         );

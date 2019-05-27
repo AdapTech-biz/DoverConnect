@@ -7,15 +7,15 @@ class AgendaItem extends Component {
     render() {
         return (
             <Card> 
-                <CardItem>
+                <CardItem style={{ backgroundColor: '#f0dc82' }} bordered header>
                     <Text>
                        {this.props.title}
                     </Text>
                     
                 </CardItem>
 
-                <CardItem>
-                <HTML html={this.props.description} />                            
+                <CardItem cardBody style={{ padding: 10 }}>
+                    <HTML html={this.props.description} />                            
                 </CardItem>
             </Card>
         );

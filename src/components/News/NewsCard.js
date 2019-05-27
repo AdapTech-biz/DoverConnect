@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React, { Component } from 'react';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableWithoutFeedback, Linking } from 'react-native';
 import { 
     Text, 
     Card, 
@@ -9,9 +9,14 @@ import {
     Left,
     Body
     } from 'native-base';
+import { dateParser } from '../../helperFunctions';
 
 
 class NewsCard extends Component {
+    openLink(url) {
+        Linking.openURL(url).catch((err) => console.error('An error occurred', err));
+    }
+
     renderImage() {
         if (this.props.article.enclosure !== undefined) {
             return this.props.article.enclosure._attributes.url;
@@ -20,16 +25,15 @@ class NewsCard extends Component {
     }
     
     render() {
-        // console.log((this.props.article));
         return (
-                <TouchableOpacity >
+                <TouchableWithoutFeedback onPress={() => this.openLink(this.props.article.link._text)}>
                     <Card>
-                       <CardItem> 
+                       <CardItem bordered header> 
                            <Left>
                                 <Thumbnail source={require('../../images/dover_logo.png')} />
                                 <Body>
                                     <Text>{this.props.article.title._text}</Text>
-                                    <Text note>10 Jun 2019</Text>
+                                    <Text note>{dateParser(this.props.article.pubDate._text)}</Text>
                                 </Body>
                            </Left>
                        </CardItem>
@@ -41,15 +45,15 @@ class NewsCard extends Component {
                            />
                        </CardItem>
 
-                       <CardItem>
+                       <CardItem cardBody style={{ paddingHorizontal: 10 }}>
                            <Text>
-                           {this.props.article.description._text.replace(/(<([^>]+)>)/ig, '').substring(0, 175)}
-                           ...Read More
+                            {this.props.article.description._text.replace(/(<([^>]+)>)/ig, '').substring(0, 175).trim()}
+                            ...Read More
                            </Text>
                            
                        </CardItem>
                    </Card>
-                </TouchableOpacity>
+                </TouchableWithoutFeedback>
 
         );
     }
