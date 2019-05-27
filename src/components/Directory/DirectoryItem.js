@@ -13,7 +13,7 @@ const DirectoryItem = () => {
 
                 <Image
                     style={styles.iconStyle} 
-                    source={require('../images/phone_call.png')} 
+                    source={require('../../images/phone_call.png')} 
                 />
             </CardItem>
 
