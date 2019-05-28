@@ -7,7 +7,9 @@ import {
     CardItem,
     Thumbnail,
     Left,
-    Body
+    Body,
+    Icon,
+    View
     } from 'native-base';
 import { dateParser } from '../../helperFunctions';
 
@@ -26,7 +28,7 @@ class NewsCard extends Component {
     
     render() {
         return (
-                <TouchableWithoutFeedback onPress={() => this.openLink(this.props.article.link._text)}>
+             
                     <Card>
                        <CardItem bordered header> 
                            <Left>
@@ -38,22 +40,27 @@ class NewsCard extends Component {
                            </Left>
                        </CardItem>
 
-                       <CardItem>
+                       <CardItem button onPress={() => this.openLink(this.props.article.link._text)}>
                            <Image 
                                 source={{ uri: this.renderImage() }}
                                 style={{ height: 200, width: null, flex: 1 }}
                            />
                        </CardItem>
 
-                       <CardItem cardBody style={{ paddingHorizontal: 10 }}>
+                       <CardItem cardBody button onPress={() => this.openLink(this.props.article.link._text)} style={{ paddingHorizontal: 10 }}>
                            <Text>
                             {this.props.article.description._text.replace(/(<([^>]+)>)/ig, '').substring(0, 175).trim()}
                             ...Read More
                            </Text>
-                           
+                       </CardItem>
+                       <CardItem footer>
+                           <View style={{flex: 1,flexDirection: 'row', justifyContent: 'space-evenly' }}>
+                                <Icon name='chatboxes' />
+                                <Icon name='share-alt' />
+                                <Icon name='heart' />
+                           </View>
                        </CardItem>
                    </Card>
-                </TouchableWithoutFeedback>
 
         );
     }
