@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
-import { Container, Header, Left, 
+import { Container, Header, Left, Icon,
         Right, Body, Tab, Tabs,
         ScrollableTab, StyleProvider } from 'native-base';
 import { createStore, applyMiddleware } from 'redux';
@@ -31,7 +31,9 @@ class App extends Component {
                     <Body style={{ flex: 1 }} >
                       <Image source={require('./src/images/app_logo.png')} />
                     </Body>
-                    <Right />
+                    <Right>
+                      <Icon name='megaphone' />
+                      </Right>
                   </Header>
                   <Tabs renderTabBar={() => <ScrollableTab />}>
                     <Tab heading="News">

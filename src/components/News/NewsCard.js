@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import React, { Component } from 'react';
-import { Image, TouchableWithoutFeedback, Linking } from 'react-native';
+import { Image, Linking } from 'react-native';
 import { 
     Text, 
     Card, 
@@ -47,14 +47,14 @@ class NewsCard extends Component {
                            />
                        </CardItem>
 
-                       <CardItem cardBody button onPress={() => this.openLink(this.props.article.link._text)} style={{ paddingHorizontal: 10 }}>
-                           <Text>
+                       <CardItem cardBody button onPress={() => this.openLink(this.props.article.link._text)} >
+                           <Text style={{ padding: 15 }}>
                             {this.props.article.description._text.replace(/(<([^>]+)>)/ig, '').substring(0, 175).trim()}
-                            ...Read More
+                             ...Read More
                            </Text>
                        </CardItem>
-                       <CardItem footer>
-                           <View style={{flex: 1,flexDirection: 'row', justifyContent: 'space-evenly' }}>
+                       <CardItem bordered footer>
+                           <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                                 <Icon name='chatboxes' />
                                 <Icon name='share-alt' />
                                 <Icon name='heart' />
