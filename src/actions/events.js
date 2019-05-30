@@ -1,10 +1,10 @@
 import axios from 'axios';
 import convert from 'xml-js';
-import {dateParser} from '../helperFunctions';
+import { EVENTS_ARRAY } from './ActionTypes';
+import { dateParser } from '../helperFunctions';
 
 
 export function populateEventsArray(data) {
-
     const events = {};
     const markedDates = {};
     data.forEach(element => {
@@ -19,7 +19,7 @@ export function populateEventsArray(data) {
 
       const dates = Object.keys(events);
     return ({
-        type: 'EVENTS_ARRAY',
+        type: EVENTS_ARRAY,
         payload: { events, minDate: dates[0], maxDate: dates[dates.length - 1], markedDates }
     });
 }
