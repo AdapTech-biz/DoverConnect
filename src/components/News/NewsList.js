@@ -17,7 +17,7 @@ class NewsList extends Component {
         return (
            
             <Container>
-                <Content>
+                <Content padder>
                     <FlatList 
                         data={this.props.newsArticles}
                         initialNumToRender={10}

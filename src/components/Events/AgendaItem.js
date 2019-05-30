@@ -14,8 +14,8 @@ class AgendaItem extends Component {
                     
                 </CardItem>
 
-                <CardItem cardBody style={{ padding: 10 }}>
-                    <HTML html={this.props.description} />                            
+                <CardItem cardBody >
+                    <HTML style={{ padding: 10 }} html={this.props.description} />                            
                 </CardItem>
             </Card>
         );

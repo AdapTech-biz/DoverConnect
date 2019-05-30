@@ -1,11 +1,13 @@
 import React from 'react';
 import { Image, TouchableWithoutFeedback } from 'react-native';
+import { connect } from 'react-redux';
 import { Card, CardItem, Text } from 'native-base';
+import { displayMenu } from '../../actions/Dining';
 
 
 const ResturantCard = (props) => {
     return (
-        <TouchableWithoutFeedback >
+        <TouchableWithoutFeedback onPress={() => props.displayMenu(props.details.name)}>
         <Card style={{ flex: 1 }}>
             <CardItem header bordered>
                 <Text>{props.details.name}</Text>
@@ -25,4 +27,4 @@ const ResturantCard = (props) => {
     );
 };
 
-export default ResturantCard;
+export default connect(null, { displayMenu })(ResturantCard);
